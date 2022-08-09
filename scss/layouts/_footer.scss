@@ -1,0 +1,18 @@
+
+footer
+{
+    color: white;
+    background-color: grey;
+}
+footer h1 {
+    font-family: 'Shrikhand', sans-serif;
+}
+
+.footer_line
+{
+    display: flex;
+    align-items: center;
+}
+.footer_line p {
+    margin-left: 10px;
+}

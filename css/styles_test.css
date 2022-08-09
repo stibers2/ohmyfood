@@ -1,0 +1,135 @@
+/*violet*/
+/*rose*/
+/*vert*/
+/*lighter grey*/
+/*grey*/
+.loader__food {
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: loader 1s ease-in-out 3s forwards;
+  vertical-align: middle;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+@media screen and (min-width: 768px) {
+  .loader__food {
+    top: 40%;
+    left: 35%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .loader__food {
+    top: 40%;
+    left: 45%;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*   -------------------------------   */
+.starter {
+  animation: fadein 3s ease-in-out;
+}
+@media screen and (min-width: 1280px) {
+  .starter {
+    width: 400px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.meals {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+.meals:hover {
+  padding-right: 75px;
+}
+.meals:hover .cross {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.meals:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
+.last__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.last__line p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .last__line p {
+    padding-right: 20px;
+  }
+}
+
+.last__line span {
+  margin-right: 5px;
+}
+
+.cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.cross .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+
+/*animation: rotate 1s linear infinite; */
+/*------------------   */
+/*------------------------------------------------------------------------    */
+
+/*# sourceMappingURL=styles_test.css.map */

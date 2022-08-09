@@ -1,0 +1,12 @@
+{
+  "name": "projet_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+     "sass": "sass --watch ./scss/styles.scss:./css/styles.css",
+     "sass_test": "sass --watch ./scss/styles_test.scss:./css/styles_test.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

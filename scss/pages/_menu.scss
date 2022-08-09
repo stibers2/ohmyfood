@@ -1,0 +1,143 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.recipes {
+  @include desktop {
+    display:flex;
+  }
+}
+
+.starter {
+  animation: fadein 3s ease-in-out;
+  @include desktop {
+    width: 400px;
+  }
+}
+.main_course {
+  animation: fadein 6s ease-in-out;
+  @include desktop {
+    width: 400px;
+  }
+}
+.dessert {
+  animation: fadein 9s ease-in-out;
+  @include desktop {
+    width: 400px;
+  }
+}
+.check {
+  @include check;
+}
+
+.recipe {
+  @include recipe;
+}
+.recipe_info_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5em;
+}
+.recipe_info_price p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @include desktop {
+    padding-right: 20px;
+  }
+}
+.recipe_info_price span {
+  margin-right: 5px;
+}
+
+/*menus*/
+.menu_title
+{
+    display:flex;
+    justify-content: center;
+}
+
+.img_menu{
+    height: 200px;
+    width: 100%;
+
+}
+
+
+
+.main_menu
+{
+    background-color:$main_menu_color;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    top: -30px;
+}
+
+.main_menu .restaurant_name {
+    display: flex;
+    justify-content: center;
+}
+
+.main_menu .restaurant_name p {
+    justify-content: center;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 40px;
+}
+
+.restaurant_name .fa-heart
+{
+    justify-content: end;
+    color: white;
+}
+
+.section_plat
+{
+    border-bottom:  3px solid #99E2D0;
+    margin-left: 20px;
+}
+/*
+.recipe
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px 20px;
+    border-radius:20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+.recipe .recipe_text
+{
+    flex-direction: column;
+}
+
+.recipe_info_price
+{
+    display: flex;
+}
+.recipe_info_price .price
+{
+    margin-left:20px;
+}
+.recipe_check
+{
+    margin-left: auto;
+    background-color: $tertiary_color;
+    opacity: 0;
+}
+.recipe_check i
+{
+    color: $tertiary_color;
+    background-color: white;
+    
+}
+*/
+/*
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 599px) {
+      grid-template-columns: 1fr;
+  }
+}*/

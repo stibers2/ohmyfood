@@ -1,0 +1,154 @@
+@import "../utils/variables";
+
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: #dbdcef;
+    border-right-color: #474bff;
+    animation: spinner 1s ease-in-out 3s forwards;
+    vertical-align: middle;
+position: absolute;
+top: 40%;
+left: 20%;
+@include tablet {
+top:40%;
+left: 35%;
+}
+@include desktop {
+top: 40%;
+left: 45%;
+ }
+ }
+
+.logo {
+    justify-content: center;
+    display: flex;
+}
+.header_accueil {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: $main_menu_color;
+    border-color: black;
+}
+.header_accueil .city {
+    background-color: $accueil_header_city;
+    display: flex;
+    justify-content: center;
+}
+.city a {
+margin-left: 10px;
+}
+
+.search_bouton
+{
+    color: white;
+    background-color:#9356DC; /*degradé*/
+}
+
+.functions{
+    @include tablet {
+
+      }
+      @include desktop {
+        display: flex;
+         }
+         
+}
+
+.functions h1 {
+padding-left: 20px;
+}
+
+.functionning
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.functionning .sub-funct
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  $main_menu_color;
+    border-radius:16px;
+    margin: 10px 00px 0 00px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+.fonc_number
+{
+    background-color:  #9356DC;
+    color: white;
+    border-radius:50%;
+}
+.func-icon {
+    align-items: center;
+    margin-left: 10px;
+}
+.fa-mobile, .fa-list
+{
+    color: black;
+}
+
+.fa-store 
+{
+    color: #9356DC;
+}
+.functionning p {
+    margin-left: 10px;
+}
+/*restaurants*/
+.restaurants {
+    background-color:  grey;
+}
+.restaurant {
+    border-radius: 16px;
+    background-color: white;
+    margin: 20px 20px 0 20px;
+}
+.info_rest {
+    display: flex;
+}
+
+.info_rest .fa-heart
+{
+    color: black;
+    text-align: right;
+    align-items: right;
+
+}
+.info_rest .fa-heart:hover
+{
+    color: #9356DC;
+
+}
+
+.img_rest
+{
+    height: 200px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.restaurant .new_restaurant1
+{
+    position: absolute;
+    bottom: -50px;
+    left: 350px;
+    color:green;
+    background-color: black;
+}
+.restaurant .new_restaurant2
+{
+    position: absolute;
+    bottom: -50px;
+    left: 350px;
+    color:green;
+    background-color: black;
+}
