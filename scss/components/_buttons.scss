@@ -12,4 +12,5 @@
     color: white;
     background: radial-gradient(circle, lighten($primary_color, 5) 0%, darken($primary_color, 10) 100%);
     align-items: center;
+    justify-content: center;
 }

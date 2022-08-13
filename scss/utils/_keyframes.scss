@@ -1,9 +1,11 @@
-@keyframes spinner {
+@keyframes spinner_keyframe {
   0% {
     opacity: 1 ;
+    rotate: 360deg;
   }
   50% {
     opacity: 0.5;
+    rotate: 360deg;
   }
   100% {
     opacity: 0;

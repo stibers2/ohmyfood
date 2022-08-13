@@ -1,5 +1,6 @@
 @import "../utils/variables";
-
+@import "../utils/keyframes";
+@import "../utils/mixins";
 
 .spinner {
     width: 56px;
@@ -10,7 +11,7 @@
     border: 9px solid;
     border-color: #dbdcef;
     border-right-color: #474bff;
-    animation: spinner 1s ease-in-out 3s forwards;
+    animation: spinner_keyframe 1s ease-in-out 3s forwards;
     vertical-align: middle;
 position: absolute;
 top: 40%;
@@ -92,29 +93,42 @@ padding-left: 20px;
     align-items: center;
     margin-left: 10px;
 }
-.fa-mobile, .fa-list
+.fa-mobile, .fa-list, .fa-store 
 {
     color: black;
 }
 
-.fa-store 
-{
-    color: #9356DC;
-}
 .functionning p {
     margin-left: 10px;
 }
+
 /*restaurants*/
 .restaurants {
-    background-color:  grey;
+    background-color:   $main_menu_color;
+}
+.restaurant_link {
+    text-decoration-line: none;  
 }
 .restaurant {
     border-radius: 16px;
     background-color: white;
     margin: 20px 20px 0 20px;
+    color: black;
+    position: relative;
 }
+.new {
+    color: #008766;
+    background: $tertiary_color;
+    border: 5px solid $tertiary_color;
+    border-radius: 5px;
+    position: absolute;
+    right: 1%;
+    top: 5%;
+  }
+  
 .info_rest {
     display: flex;
+    justify-content: space-between;
 }
 
 .info_rest .fa-heart
@@ -122,13 +136,23 @@ padding-left: 20px;
     color: black;
     text-align: right;
     align-items: right;
-
+    justify-content: end;
 }
-.info_rest .fa-heart:hover
-{
-    color: #9356DC;
 
-}
+.fill_heart {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+    }
+  }
 
 .img_rest
 {

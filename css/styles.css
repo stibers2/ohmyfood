@@ -22,6 +22,7 @@ html {
   color: white;
   background: radial-gradient(circle, #a16be0 0%, #782cd3 100%);
   align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -80,7 +81,7 @@ footer h1 {
   }
 }
 
-.check {
+.recipe_check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +97,7 @@ footer h1 {
   opacity: 0;
   transition: transform 330ms ease-in-out;
 }
-.check .fa-check-circle {
+.recipe_check .fa-check-circle {
   color: #fff;
   transition: transform 500ms ease-in-out;
 }
@@ -117,7 +118,7 @@ footer h1 {
 .recipe:hover {
   padding-right: 75px;
 }
-.recipe:hover .check {
+.recipe:hover .recipe_check {
   opacity: 1;
   transform: translate(-50px);
 }
@@ -236,6 +237,55 @@ footer h1 {
 /*vert*/
 /*lighter grey*/
 /*grey*/
+@keyframes spinner_keyframe {
+  0% {
+    opacity: 1;
+    rotate: 360deg;
+  }
+  50% {
+    opacity: 0.5;
+    rotate: 360deg;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #474bff;
+  animation: spinner_keyframe 1s ease-in-out 3s forwards;
+  vertical-align: middle;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+@media screen and (min-width: 768px) {
+  .spinner {
+    top: 40%;
+    left: 35%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .spinner {
+    top: 40%;
+    left: 45%;
+  }
+}
+
 .logo {
   justify-content: center;
   display: flex;
@@ -301,12 +351,8 @@ footer h1 {
   margin-left: 10px;
 }
 
-.fa-mobile, .fa-list {
+.fa-mobile, .fa-list, .fa-store {
   color: black;
-}
-
-.fa-store {
-  color: #9356DC;
 }
 
 .functionning p {
@@ -315,27 +361,56 @@ footer h1 {
 
 /*restaurants*/
 .restaurants {
-  background-color: grey;
+  background-color: #F6F6F6;
+}
+
+.restaurant_link {
+  text-decoration-line: none;
 }
 
 .restaurant {
   border-radius: 16px;
   background-color: white;
   margin: 20px 20px 0 20px;
+  color: black;
+  position: relative;
+}
+
+.new {
+  color: #008766;
+  background: #99E2D0;
+  border: 5px solid #99E2D0;
+  border-radius: 5px;
+  position: absolute;
+  right: 1%;
+  top: 5%;
 }
 
 .info_rest {
   display: flex;
+  justify-content: space-between;
 }
 
 .info_rest .fa-heart {
   color: black;
   text-align: right;
   align-items: right;
+  justify-content: end;
 }
 
-.info_rest .fa-heart:hover {
-  color: #9356DC;
+.fill_heart {
+  color: black;
+  cursor: pointer;
+}
+.fill_heart:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .img_rest {
@@ -365,5 +440,26 @@ footer h1 {
 /*vert*/
 /*lighter grey*/
 /*grey*/
+@keyframes spinner_keyframe {
+  0% {
+    opacity: 1;
+    rotate: 360deg;
+  }
+  50% {
+    opacity: 0.5;
+    rotate: 360deg;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

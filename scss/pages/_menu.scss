@@ -26,13 +26,53 @@
     width: 400px;
   }
 }
-.check {
-  @include check;
+
+.recipe_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $tertiary_color;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+  & .fa-check-circle {
+    color: #fff;
+    transition: transform 500ms ease-in-out;
+  }
 }
 
+
 .recipe {
-  @include recipe;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+  &:hover {
+    padding-right: 75px;
+  }
+  &:hover .recipe_check {
+    opacity: 1;
+    transform: translate(-50px);
+  }
+  &:hover .fa-check-circle {
+    transform: rotate(360deg) ;
+  }
 }
+
 .recipe_info_price {
   display: flex;
   justify-content: space-between;
