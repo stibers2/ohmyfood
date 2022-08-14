@@ -51,6 +51,7 @@ footer h1 {
 @media screen and (min-width: 1280px) {
   .recipes {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -81,25 +82,11 @@ footer h1 {
   }
 }
 
-.recipe_check {
+.recipe_info_price {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  padding: 20px;
-  right: -50px;
-  top: 0;
-  opacity: 0;
-  transition: transform 330ms ease-in-out;
-}
-.recipe_check .fa-check-circle {
-  color: #fff;
-  transition: transform 500ms ease-in-out;
+  line-height: 1.5em;
 }
 
 .recipe {
@@ -138,6 +125,7 @@ footer h1 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: normal;
 }
 @media screen and (min-width: 1280px) {
   .recipe_info_price p {
@@ -146,7 +134,28 @@ footer h1 {
 }
 
 .recipe_info_price span {
-  margin-right: 5px;
+  margin-right: 25px;
+}
+
+.recipe_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.recipe_check .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
 }
 
 /*menus*/
@@ -168,11 +177,14 @@ footer h1 {
 }
 
 .main_menu .restaurant_name {
+  font-family: Shrikhand, sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.main_menu .restaurant_name p {
+.main_menu .restaurant_name h2 {
   justify-content: center;
   font-family: "Shrikhand", sans-serif;
   font-size: 40px;
@@ -180,58 +192,9 @@ footer h1 {
 
 .restaurant_name .fa-heart {
   justify-content: end;
-  color: white;
+  color: black;
 }
 
-.section_plat {
-  border-bottom: 3px solid #99E2D0;
-  margin-left: 20px;
-}
-
-/*
-.recipe
-{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 20px 20px 20px;
-    border-radius:20px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
-}
-.recipe .recipe_text
-{
-    flex-direction: column;
-}
-
-.recipe_info_price
-{
-    display: flex;
-}
-.recipe_info_price .price
-{
-    margin-left:20px;
-}
-.recipe_check
-{
-    margin-left: auto;
-    background-color: $tertiary_color;
-    opacity: 0;
-}
-.recipe_check i
-{
-    color: $tertiary_color;
-    background-color: white;
-
-}
-*/
-/*
-.proj-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  @media (max-width: 599px) {
-      grid-template-columns: 1fr;
-  }
-}*/
 /*violet*/
 /*rose*/
 /*vert*/
