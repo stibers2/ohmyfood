@@ -1,9 +1,25 @@
+@import "../utils/mixins";
+
 
 footer
 {
     color: white;
-    background-color: grey;
+    background-color: $footer_color;
+    margin-top: 20px;
+    padding: 20px 0 0 20px;
+   
 }
+
+.footer_div 
+{
+    @include desktop {
+        @include flex(row, 0, 0, 0);
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+}
+
+
 footer h1 {
     font-family: 'Shrikhand', sans-serif;
 }
@@ -12,7 +28,25 @@ footer h1 {
 {
     display: flex;
     align-items: center;
+    @include desktop {
+        @include flex(row, 0, 0, 0);
+        margin-left: 20px;
+    }
 }
+
 .footer_line p {
     margin-left: 10px;
+}
+
+.footer_div p {
+    @include desktop {
+        margin-left: 20px;
+    }
+}
+
+.footer_line .hand-icon {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    height: 14px;
+    width: 14px;
 }

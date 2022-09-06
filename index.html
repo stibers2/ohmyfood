@@ -12,116 +12,221 @@
     </head>
 
     <body>
-        <div class="spinner"></div>
+        <div class="wrapper">
+            <div class="spinner"></div>
+            <p>test test</p>
+        </div>
         <div class="logo">
             <img src="images\logo\ohmyfood.png" alt="logo ohmyfood" />
         </div>
-        <header>
-            <div class="header_accueil">
-                <div class="city">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <a> Paris, Belleville</a>
-                </div>
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <input type="button" class="search_bouton" value="Explorer nos restaurants"></input>
+        <header class="header_accueil">
+            <div class="city">
+                <i class="fas fa-map-marker-alt"></i>
+                <span> Paris, Belleville</span>
             </div>
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <button class="search_button">Explorer nos restaurants</button>
         </header>
-        <h1>Fonctionnement</h1>
+        <h1 class="function_title">Fonctionnement</h1>
         <div class="functions">
             <div class="functionning">
                 <p class="fonc_number">1</p>
                 <div class="sub-funct">
-                    <i class="fas fa-mobile func-icon"></i>
+                    <!-- <i class="fas fa-mobile func-icon"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg svg__smartphone func-icon" viewBox="0 0 90 120">
+                        <rect stroke-linejoin="round" stroke-width="10" x="15" y="15" width="60" height="90" />
+                        <rect stroke-width="5" x="20" y="20" width="50" height="70" />
+                        <circle cx="45" cy="102" r="5" />
+                    </svg>
                     <p>Choisissez un restaurant</p>
                 </div>
             </div>
             <div class="functionning">
                 <p class="fonc_number">2</p>
                 <div class="sub-funct">
-                    <i class="fas fa-list func-icon"></i>
+                    <!-- <i class="fas fa-list func-icon"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg svg__listing func-icon" viewBox="0 0 90 120"
+                        stroke-width="10">
+                        <path d="
+                                M 15,30
+                                L 25,30
+                                M 35,30
+                                L 115,30
+                                M 15,60
+                                L 25,60
+                                M 35,60
+                                L 115,60
+                                M 15,90
+                                L 25,90
+                                M 35,90
+                                L 115,90
+                            ">
+                        </path>
+                    </svg>
                     <p>Composez votre menu</p>
                 </div>
             </div>
             <div class="functionning">
                 <p class="fonc_number">3</p>
                 <div class="sub-funct">
-                    <i class="fas fa-store func-icon"></i>
+                    <!-- <i class="fas fa-store func-icon"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="svg svg__store" viewBox="0 0 1000 1000">
+                        <path stroke-width="70" d="
+                                    M 165,535
+                                    L 165,815
+                                    M 835,535
+                                    L 835,815
+                                " />
+                        <path stroke-width="200" d="
+                                    M 130,795
+                                    L 870,795
+                                " />
+                        <path stroke-width="200" stroke-linecap="round" stroke-linejoin="round" d="
+                                    M 195,235
+                                    L 240,150
+                                    L 750,150
+                                    L 795,235
+                                    L 195,235
+                                    L 150,320
+                                    L 840,320
+                                    L 795,235
+                                    L 840,320
+                                    c 0,100 -40,100 -40,0
+                                    c 0,-100 -177,-100 -177,0
+                                    c 0,100 -40,100 -40,0
+                                    c 0,-100 -176,-100 -176,0
+                                    c 0,100 -40,100 -40,0
+                                    c 0,-100 -177,-100 -177,0
+                                    c 0,100 -40,100 -40,0
+                                " />
+                    </svg>
                     <p>Dégustez au restaurant</p>
-                </div>    
+                </div>
             </div>
         </div>
         <div class="restaurants">
             <h1>Restaurants</h1>
-            <a href="pages/menu_la_palette_du_gout.html" class="restaurant_link">
-                <div class="restaurant">
-                   
-                    <div class="new"> Nouveau </div>
-                    
-                    <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="img_rest" />
-                    <div class="info_rest">
-                        <div class="info_restaurant">
-                            <p><strong>La palette du goût</strong></p>
-                            <p>Ménilmontant</p>
+            <div class="restos_cards">
+                <a href="pages/menu_la_palette_du_gout.html" class="restaurant_link">
+                    <div class="restaurant">
+
+                        <div class="new"> Nouveau </div>
+
+                        <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="img_rest" />
+                        <div class="info_rest">
+                            <div class="info_restaurant">
+                                <p><strong>La palette du goût</strong></p>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="fill_heart far fa-heart fa-2x"></i>
                         </div>
-                        <i class="fill_heart far fa-heart fa-2x"></i>
                     </div>
-                </div>
-            </a>
-            <a href="pages/menu_la_note_enchantee.html" class="restaurant_link">
-                <div class="restaurant">
-                    <div class="btn__card">
-                    <span class="new"> Nouveau </span>
-                    </div>
-                    <img src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" class="img_rest" />
-                    <div class="info_rest">
-                        <div class="info_restaurant">
-                            <p><strong>La note enchantée</strong></p>
-                            <p>Charonne</p>
+                </a>
+                <a href="pages/menu_la_note_enchantee.html" class="restaurant_link">
+                    <div class="restaurant">
+                        <div class="btn__card">
+                            <span class="new"> Nouveau </span>
                         </div>
-                        <i class="fill_heart far fa-heart fa-2x"></i>
-                    </div>
-                </div>
-            </a>
-            <a href="pages/menu_a_la_francaise.html" class="restaurant_link">
-                <div class="restaurant">
-                    <img src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="img_rest" />
-                    <div class="info_rest">
-                        <div class="info_restaurant">
-                            <p><strong>A la française</strong></p>
-                            <p>Cité Rouge</p>
+                        <img src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" class="img_rest" />
+                        <div class="info_rest">
+                            <div class="info_restaurant">
+                                <p><strong>La note enchantée</strong></p>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="fill_heart far fa-heart fa-2x"></i>
                         </div>
-                        <i class="fill_heart far fa-heart fa-2x"></i>
                     </div>
-                </div>
-            </a>
-            <a href="pages/menu_le_delice_des_sens.html" class="restaurant_link">
-                <div class="restaurant">
-                    <img src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="img_rest" />
-                    <div class="info_rest">
-                        <div class="info_restaurant">
-                            <p><strong>Le délice des sens</strong></p>
-                            <p>Folie-Méricourt</p>
+                </a>
+                <a href="pages/menu_a_la_francaise.html" class="restaurant_link">
+                    <div class="restaurant">
+                        <img src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="img_rest" />
+                        <div class="info_rest">
+                            <div class="info_restaurant">
+                                <p><strong>A la française</strong></p>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="fill_heart far fa-heart fa-2x"></i>
                         </div>
-                        <i class="fill_heart far fa-heart fa-2x"></i>
                     </div>
-                </div>
-            </a>
+                </a>
+                <a href="pages/menu_le_delice_des_sens.html" class="restaurant_link">
+                    <div class="restaurant">
+                        <img src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            class="img_rest" />
+                        <div class="info_rest">
+                            <div class="info_restaurant">
+                                <p><strong>Le délice des sens</strong></p>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="fill_heart far fa-heart fa-2x"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         </div>
         <footer>
             <h1>ohmyfood</h1>
-            <div class="footer_line">
-                <i class="fas fa-utensils"></i>
-                <p>Proposer un restaurant</p>
+            <div class="footer_div">
+                <div class="footer_line">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </div>
+                <div class="footer_line">
+                    <!-- <i class="fas fa-handshake"></i> -->
+                    <svg class="svg hand-icon"
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 640 512"
+                        >
+                            <path 
+                                d="
+                                    M488 192
+                                    H336
+                                    v56
+                                    c0 39.7-32.3 72-72 72
+                                    s-72-32.3-72-72
+                                    V126.4
+                                    l-64.9 39
+                                    C107.8 176.9 96 197.8 96 220.2
+                                    v47.3l-80 46.2
+                                    C.7 322.5-4.6 342.1 4.3 357.4
+                                    l80 138.6
+                                    c8.8 15.3 28.4 20.5 43.7 11.7
+                                    L231.4 448
+                                    H368
+                                    c35.3 0 64-28.7 64-64
+                                    h16
+                                    c17.7 0 32-14.3 32-32
+                                    v-64
+                                    h8
+                                    c13.3 0 24-10.7 24-24
+                                    v-48
+                                    c0-13.3-10.7-24-24-24
+                                    z
+                                    m147.7-37.4
+                                    L555.7 16
+                                    C546.9.7 527.3-4.5 512 4.3
+                                    L408.6 64
+                                    H306.4
+                                    c-12 0-23.7 3.4-33.9 9.7
+                                    L239 94.6
+                                    c-9.4 5.8-15 16.1-15 27.1
+                                    V248c0 22.1 17.9 40 40 40
+                                    s40-17.9 40-40
+                                    v-88h184
+                                    c30.9 0 56 25.1 56 56
+                                    v28.5l80-46.2
+                                    c15.3-8.9 20.5-28.4 11.7-43.7
+                                    z
+                            "/>
+                        </svg>
+                    <p>Devenir partenaire</p>
+                </div>
+                <p>Mentions légales</p>
+                <p>Contact</p>
             </div>
-            <div class="footer_line">
-                <i class="fas fa-handshake"></i>
-                <p>Devenir partenaire</p>
-            </div>
-            <p>Mentions légales</p>
-            <p>Contact</p>
         </footer>
     </body>
     <!-- 
