@@ -10,11 +10,27 @@ html {
 /*vert*/
 /*lighter grey*/
 /*grey*/
-.main_menu .order_button {
+.order_button_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.order_button_div .order_button {
   color: white;
-  background: radial-gradient(circle, #a16be0 0%, #782cd3 100%);
+  font-size: 0.9em;
+  font-weight: bold;
+  box-shadow: 2px 5px 8px #d5d5d5;
+  background: linear-gradient(to left top, #9356D5, #FF79DA);
+  cursor: pointer;
   align-items: center;
   justify-content: center;
+  height: 50px;
+  width: 185px;
+  margin-top: 20px;
+  padding: 0 25px;
+  border-radius: 25px;
+  border: none;
 }
 
 footer {
@@ -74,42 +90,49 @@ footer h1 {
 @media screen and (min-width: 1280px) {
   .recipes {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
 .starter {
+  margin: 30px 0;
   animation: fadein 3s ease-in-out;
 }
 @media screen and (min-width: 1280px) {
   .starter {
-    width: 400px;
+    width: 100%;
   }
 }
 
 .main_course {
+  margin: 30px 0;
   animation: fadein 6s ease-in-out;
 }
 @media screen and (min-width: 1280px) {
   .main_course {
-    width: 400px;
+    width: 100%;
   }
 }
 
 .dessert {
+  margin: 30px 0;
   animation: fadein 9s ease-in-out;
 }
 @media screen and (min-width: 1280px) {
   .dessert {
-    width: 400px;
+    width: 100%;
   }
 }
 
-.recipe_info_price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  line-height: 1.5em;
+.dessert__title, .main_course__title, .starter__title {
+  /* border-bottom: 3px solid #99E2D0; */
+  background: linear-gradient(to right, #99E2D0, #99E2D0) no-repeat bottom transparent;
+  background-size: 5% 3px;
+  background-position: left bottom;
+  margin-left: 5px;
+  font-size: 1em;
+  font-weight: 400;
+  height: 30px;
 }
 
 .recipe {
@@ -184,7 +207,20 @@ footer h1 {
 /*menus*/
 .menu_title {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  margin: 0 auto;
+}
+
+.logo_menu {
+  /*position: relative;
+  margin-left: auto;
+  left: -600px;*/
+}
+
+.right_title_filler {
+  opacity: 0;
 }
 
 .img_menu {
@@ -198,6 +234,8 @@ footer h1 {
   border-radius: 30px 30px 0 0;
   position: relative;
   top: -30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .main_menu .restaurant_name {

@@ -3,10 +3,25 @@
 
 
 
-.main_menu .order_button
-{
-    color: white;
-    background: radial-gradient(circle, lighten($primary_color, 5) 0%, darken($primary_color, 10) 100%);
-    align-items: center;
+.order_button_div {
+    display: flex;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    .order_button {
+        color: white;
+        font-size: 0.9em;
+        font-weight: bold;
+        box-shadow: 2px 5px 8px #d5d5d5;
+        background: linear-gradient(to left top, #9356D5, #FF79DA);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 185px;
+        margin-top: 20px;
+        padding: 0 25px;
+        border-radius: 25px;
+        border: none;
+    }
 }
