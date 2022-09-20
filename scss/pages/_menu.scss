@@ -2,9 +2,30 @@
 @import "../utils/mixins";
 
 
+.body_menu {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  background-color: #F6F6F6;
+}
+
+main {
+  @include flex(column, 0, 0, 0);
+
+}
+
+.menu_title .fa-arrow-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+}
+
 .recipes {
   @include desktop {
-    display:flex;
+    display: flex;
     justify-content: space-around;
   }
 }
@@ -13,36 +34,42 @@
   margin: 30px 0;
 
   animation: fadein 3s ease-in-out;
+
   @include desktop {
     width: 100%;
   }
 }
+
 .main_course {
   margin: 30px 0;
   animation: fadein 6s ease-in-out;
+
   @include desktop {
     width: 100%;
   }
 }
+
 .dessert {
   margin: 30px 0;
   animation: fadein 9s ease-in-out;
+
   @include desktop {
     width: 100%;
   }
 }
 
 
-.dessert__title, .main_course__title, .starter__title
-{
-      /* border-bottom: 3px solid #99E2D0; */
-      background: linear-gradient(to right, #99E2D0, #99E2D0) no-repeat bottom transparent;
-      background-size: 5% 3px;
-      background-position: left bottom;
-      margin-left: 5px;
-      font-size: 1em;
-      font-weight: 400;
-      height: 30px;
+.dessert__title,
+.main_course__title,
+.starter__title {
+  /* border-bottom: 3px solid #99E2D0; */
+  background: linear-gradient(to right, #99E2D0, #99E2D0) no-repeat bottom transparent;
+  background-size: 5% 3px;
+  background-position: left bottom;
+  margin-left: 5px;
+  font-size: 1em;
+  font-weight: 400;
+  height: 30px;
 }
 
 
@@ -58,15 +85,18 @@
   text-overflow: ellipsis;
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
+
   &:hover {
     padding-right: 75px;
   }
+
   &:hover .recipe_check {
     opacity: 1;
     transform: translate(-50px);
   }
+
   &:hover .fa-check-circle {
-    transform: rotate(360deg) ;
+    transform: rotate(360deg);
   }
 }
 
@@ -83,6 +113,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   font-weight: normal;
+
   @include desktop {
     padding-right: 20px;
   }
@@ -107,6 +138,7 @@
   top: 0;
   opacity: 0;
   transition: transform 330ms ease-in-out;
+
   & .fa-check-circle {
     color: #fff;
     transition: transform 500ms ease-in-out;
@@ -114,66 +146,69 @@
 }
 
 /*menus*/
-.menu_title
-{
+.menu_title {
   display: flex;
-	align-items: center;
-	justify-content: space-between;
-    padding-left: 30px;
-    margin: 0 auto;
-
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 30px; */
+  margin: 0 auto;
+  position: relative;
+  height: 63px;
+  width: 100%;
+  max-width: 1400px;
+  align-content: center;
 }
 
-.fa-arrow-left
-{
 
-}
 
 .logo_menu {
-  /*position: relative;
-  margin-left: auto;
-  left: -600px;*/
-}
-
-.right_title_filler {
-  opacity:0;
-}
-
-.img_menu{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-
+  height: 34px;
+  width: auto;
 }
 
 
 
-.main_menu
-{
-    background-color:$main_menu_color;
-    border-radius: 30px 30px 0 0;
-    position: relative;
-    top: -30px;
-    padding-left: 30px;
-    padding-right: 30px;
+.img_menu {
+  height: 335px;
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+  width: 100%;
+  object-fit: cover;
 }
+
+
+.main_menu {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  width: 100%;
+  top: -70px;
+  display: flex;
+  padding: 30px 12px 0 12px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 
 .main_menu .restaurant_name {
   font-family: Shrikhand, sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  width: 100%;
+  /* padding: 10px; */
 }
+
 
 .main_menu .restaurant_name h2 {
-    justify-content: center;
-    font-family: 'Shrikhand', sans-serif;
-    font-size: 40px;
+  justify-content: center;
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 40px;
 }
 
-.restaurant_name .fa-heart
-{
-    justify-content: end;
-    color: black;
+.restaurant_name .fa-heart {
+  justify-content: end;
+  color: black;
 }
