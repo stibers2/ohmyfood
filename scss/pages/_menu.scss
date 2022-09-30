@@ -31,6 +31,7 @@ main {
   @include desktop {
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
   }
 }
 
@@ -90,7 +91,7 @@ main {
   display: flex;
   border-radius: 15px;
   margin: 10px 0;
-  width: 100%;
+  width: 90%;
   height: 90px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
@@ -101,7 +102,9 @@ main {
   transition: padding-right 450ms ease-in-out;
   justify-content: space-between;
   align-items: flex-end;
-
+  strong {
+    padding-right: 10px;
+  }
 
   &:hover {
     /*padding-right: 75px;*/
@@ -141,6 +144,7 @@ main {
       padding-right: 20px;
     }
   }
+ 
 
 }
 
