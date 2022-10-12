@@ -41,7 +41,7 @@ main {
   flex-direction: column;
   width: 100%;
   animation: fadein 3s ease-in-out;
-
+  
   @include desktop {
     width: 100%;
   }
@@ -80,9 +80,9 @@ main {
   background-size: 5% 3px;
   background-position: left bottom;
   margin-left: 5px;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 400;
-  height: 30px;
+  height: 40px;
 }
 
 
@@ -92,7 +92,7 @@ main {
   border-radius: 15px;
   margin: 10px 0;
   width: 100%;
-  height: 90px;
+  height: 100px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
   cursor: pointer;
@@ -104,6 +104,10 @@ main {
   align-items: flex-end;
   strong {
     padding-right: 10px;
+    font-size: 40px;
+    @include desktop {
+      font-size: 16px;
+    }
   }
 
   @include desktop {
@@ -136,16 +140,24 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   flex-direction: column;
-
+  h3 {
+    font-size: 40px;
+    margin:0;
+    @include desktop {
+      font-size: 16px;
+    }
+    
+  }
   p {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     font-weight: normal;
-
+    font-size: 30px;
     @include desktop {
       padding-right: 20px;
+      font-size: 16px;
     }
   }
  
@@ -186,7 +198,7 @@ main {
   align-content: center;
 
   .logo_menu {
-    height: 34px;
+    height: 60px;
     width: auto;
   }
 
@@ -219,20 +231,21 @@ main {
 
   .restaurant_name {
     font-family: Shrikhand, sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(row,space-between,center,wrap);
     width: 100%;
 
-    h2 {
+    h1 {
       justify-content: center;
       font-family: 'Shrikhand', sans-serif;
-      font-size: 40px;
+      font-size: 60px;
+      font-weight: initial;
+      padding-left: 40px;
     }
 
     .fa-heart {
       justify-content: end;
       color: black;
+      padding-right: 40px;
     }
   }
 

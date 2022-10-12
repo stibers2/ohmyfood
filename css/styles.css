@@ -1,8 +1,54 @@
+/*violet*/
+/*rose*/
+/*vert*/
+/*lighter grey*/
+/*grey*/
+@keyframes spinner_keyframe {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*violet*/
+/*rose*/
+/*vert*/
+/*lighter grey*/
+/*grey*/
 html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   margin: 0;
   font-size: 16px;
+}
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+*/
+body {
+  margin: auto;
+  max-width: 1400px;
+  background-color: #f6f6f6;
 }
 
 /*violet*/
@@ -31,6 +77,11 @@ html {
   padding: 0 25px;
   border-radius: 25px;
   border: none;
+}
+.order_button_div .order_button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
 }
 
 footer {
@@ -168,9 +219,9 @@ main {
   background-size: 5% 3px;
   background-position: left bottom;
   margin-left: 5px;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 400;
-  height: 30px;
+  height: 40px;
 }
 
 .recipe {
@@ -179,7 +230,7 @@ main {
   border-radius: 15px;
   margin: 10px 0;
   width: 100%;
-  height: 90px;
+  height: 100px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
   cursor: pointer;
@@ -192,6 +243,12 @@ main {
 }
 .recipe strong {
   padding-right: 10px;
+  font-size: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .recipe strong {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .recipe {
@@ -222,16 +279,27 @@ main {
   text-overflow: ellipsis;
   flex-direction: column;
 }
+.recipe_info_price h3 {
+  font-size: 40px;
+  margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  .recipe_info_price h3 {
+    font-size: 16px;
+  }
+}
 .recipe_info_price p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-weight: normal;
+  font-size: 30px;
 }
 @media screen and (min-width: 1280px) {
   .recipe_info_price p {
     padding-right: 20px;
+    font-size: 16px;
   }
 }
 
@@ -267,7 +335,7 @@ main {
   align-content: center;
 }
 .menu_title .logo_menu {
-  height: 34px;
+  height: 60px;
   width: auto;
 }
 
@@ -294,18 +362,23 @@ main {
 .main_menu .restaurant_name {
   font-family: Shrikhand, sans-serif;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
-.main_menu .restaurant_name h2 {
+.main_menu .restaurant_name h1 {
   justify-content: center;
   font-family: "Shrikhand", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
+  font-weight: initial;
+  padding-left: 40px;
 }
 .main_menu .restaurant_name .fa-heart {
   justify-content: end;
   color: black;
+  padding-right: 40px;
 }
 
 /*violet*/
@@ -316,17 +389,7 @@ main {
 @keyframes spinner_keyframe {
   0% {
     opacity: 1;
-    rotate: 360deg;
-  }
-  10% {
-    rotate: 360deg;
-  }
-  20% {
-    rotate: 360deg;
-  }
-  50% {
-    opacity: 0.5;
-    rotate: 360deg;
+    -webkit-transform: rotate(360deg);
   }
   100% {
     opacity: 0;
@@ -623,7 +686,6 @@ main {
 .info_rest .fa-heart {
   color: black;
   text-align: right;
-  align-items: right;
   justify-content: end;
 }
 
@@ -647,39 +709,6 @@ main {
   width: 100%;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
-}
-
-/*violet*/
-/*rose*/
-/*vert*/
-/*lighter grey*/
-/*grey*/
-@keyframes spinner_keyframe {
-  0% {
-    opacity: 1;
-    rotate: 360deg;
-  }
-  10% {
-    rotate: 360deg;
-  }
-  20% {
-    rotate: 360deg;
-  }
-  50% {
-    opacity: 0.5;
-    rotate: 360deg;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

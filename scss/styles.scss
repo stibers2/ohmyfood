@@ -1,10 +1,11 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+@import "./utils/maps";
 @import "./base/base";
 @import "./components/buttons";
 @import "./layouts/footer";
 @import "./layouts/header_menu";
 @import "./pages/menu";
 @import "./pages/accueil";
-@import "./utils/mixins";
-@import "./utils/variables";
-@import "./utils/keyframes";
-@import "./utils/maps";
+
